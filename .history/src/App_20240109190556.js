@@ -14,32 +14,3 @@ const faqs = [
     text: "Excepturi velit laborum, perspiciatis nemo perferendis reiciendis aliquam possimus dolor sed! Dolore laborum ducimus veritatis facere molestias!",
   },
 ];
-
-export default function App() {
-  return (
-    <div>
-      <Accordion data={faqs} />
-    </div>
-  );
-}
-
-function Accordion({ data }) {
-  return (
-    <div className="accordion">
-      {data.map((el, i) => (
-        <AccordionItem title={el.title} text={el.text} num={i} />
-      ))}
-    </div>
-  );
-}
-
-function AccordionItem({ num, title, text }) {
-  return (
-    <div className="item">
-      <p className="number">{num}</p>
-      <p className="text">{title}</p>
-      <p className="icon">-</p>
-      <div className="content-box">{text}</div>
-    </div>
-  );
-}

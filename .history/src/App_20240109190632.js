@@ -26,18 +26,18 @@ export default function App() {
 function Accordion({ data }) {
   return (
     <div className="accordion">
-      {data.map((el, i) => (
-        <AccordionItem title={el.title} text={el.text} num={i} />
+      {data.map((a, b) => (
+        <AccordionItem title={a.title} text={a.text} num={b} key={el.title} />
       ))}
     </div>
   );
 }
 
-function AccordionItem({ num, title, text }) {
+function AccordionItem({ num, titile, text }) {
   return (
     <div className="item">
       <p className="number">{num}</p>
-      <p className="text">{title}</p>
+      <p className="text">{titile}</p>
       <p className="icon">-</p>
       <div className="content-box">{text}</div>
     </div>
