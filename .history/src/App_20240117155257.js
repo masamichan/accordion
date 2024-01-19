@@ -42,11 +42,11 @@ function AccordionItem({ num, title, text }) {
   }
 
   return (
-    <div className="item" onClick={handleToggle}>
+    <div className="item" onclick={handleToggle}>
       <p className="number">{num < 3 ? `0${num + 1}` : num + 1}</p>
       <p className="text">{title}</p>
       <p className="icon">{isOpen ? "-" : "+"}</p>
-      {isOpen && <div className="content-box">{text}</div>}
+      <div className="content-box">{text}</div>
     </div>
   );
 }
